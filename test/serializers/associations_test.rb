@@ -44,7 +44,7 @@ module ActiveModel
         assert_equal(
           { posts: { type: :has_many, association_options: { embed: :ids } },
             roles: { type: :has_many, association_options: { embed: :ids } },
-            bio: { type: :belongs_to, association_options: {} } },
+            bio: { type: :has_one, association_options: {} } },
           @author_serializer.class._associations
         )
         @author_serializer.each_association do |name, serializer, options|
