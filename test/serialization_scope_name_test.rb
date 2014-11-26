@@ -12,6 +12,7 @@ class DefaultScopeNameTest < ActionController::TestCase
   end
 
   class UserTestController < ActionController::Base
+    include ::ActionController::Serialization
     protect_from_forgery
 
     before_filter { request.format = :json }
@@ -44,6 +45,7 @@ class SerializationScopeNameTest < ActionController::TestCase
   end
 
   class AdminUserTestController < ActionController::Base
+    include ::ActionController::Serialization
     protect_from_forgery
 
     serialization_scope :current_admin

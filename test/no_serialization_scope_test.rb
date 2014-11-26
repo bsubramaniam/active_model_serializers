@@ -18,6 +18,7 @@ class NoSerializationScopeTest < ActionController::TestCase
   end
 
   class NoSerializationScopeController < ActionController::Base
+    include ::ActionController::Serialization
     serialization_scope nil
 
     def index

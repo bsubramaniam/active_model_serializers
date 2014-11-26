@@ -85,9 +85,9 @@ begin
   require 'action_controller'
   require 'action_controller/serialization'
 
-  ActiveSupport.on_load(:action_controller) do
-    include ::ActionController::Serialization
-  end
+  # ActiveSupport.on_load(:action_controller) do
+  #   include ::ActionController::Serialization
+  # end
 rescue LoadError => ex
   # rails on installed, continuing
 end
